@@ -1,0 +1,268 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Mandy Beauty · kozmetický salón vo Vrútkach — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh homepage pre Mandy Beauty, kozmetický salón na Hornej ulici vo Vrútkach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBF4F3; --paper-2:#F4E3E3; --ink:#1B1316; --ink-2:#4A3C40;
+  --gold:#9A7432; --gold-lt:#D6B46E; --rose:#E4677A; --blush:#EBC2C8;
+  --hair:rgba(27,19,22,.16);
+  --disp:"Abril Fatface",Georgia,serif; --sans:"Josefin Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.lbl{font:700 12px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.num{font-variant-numeric:tabular-nums lining-nums}
+
+.notice{background:var(--ink);color:#F6E9EA;font-size:13px;line-height:1.45;text-align:center;padding:9px 16px}
+
+/* hlavička ako horný okraj časopisu */
+.top{border-bottom:1px solid var(--hair)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:68px}
+.brand{font:400 24px/1 var(--disp);text-decoration:none;letter-spacing:.01em}
+.top nav{display:flex;gap:26px;margin-left:auto}
+.top nav a{font:600 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:16px 0;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 10px)/0 1px no-repeat;transition:background-size .2s}
+.top nav a:hover{background-size:100% 1px}
+.tel{font:700 15px/1 var(--sans);text-decoration:none;border:1px solid var(--ink);padding:13px 16px 11px;white-space:nowrap}
+.tel:hover{background:var(--ink);color:var(--paper)}
+
+/* titulka */
+.issue{display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:72px;align-items:center;padding-top:44px;padding-bottom:72px}
+.cover{position:relative;margin:0;aspect-ratio:46/64;overflow:hidden;background:var(--blush);color:var(--ink);box-shadow:18px 18px 0 var(--paper-2)}
+.cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:brightness(1.12) saturate(1.15)}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,244,243,.6) 0,rgba(251,244,243,0) 30%,rgba(27,19,22,0) 56%,rgba(27,19,22,.72) 100%)}
+.cover-in{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;padding:16px 20px 22px}
+.strip{display:flex;justify-content:space-between;font:700 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid rgba(27,19,22,.5);padding-bottom:8px}
+.cover h1{margin:6px 0 0;font:400 clamp(84px,11.6vw,132px)/.86 var(--disp);letter-spacing:-.025em}
+.cover h1 small{display:block;font:700 clamp(15px,1.9vw,20px)/1 var(--sans);padding-top:clamp(14px,1.6vw,22px);letter-spacing:.62em;text-transform:uppercase;text-align:right;margin:.5em -.62em 0 0}
+.badge{position:absolute;right:18px;top:44%;width:116px;height:116px;border-radius:50%;background:var(--gold-lt);display:grid;place-content:center;text-align:center;transform:rotate(-8deg)}
+.badge b{font:400 36px/1 var(--disp)}
+.badge span{font:700 10px/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase}
+.lines{margin-top:auto;color:#FFF7F6;max-width:78%}
+.lines p{margin:0 0 12px;font:600 13px/1.3 var(--sans);letter-spacing:.06em}
+.lines p strong{display:block;font:400 30px/1 var(--disp);letter-spacing:0;margin-bottom:3px}
+.lines .tag{font:italic 400 17px/1.3 var(--sans);letter-spacing:0;border-top:1px solid rgba(255,247,246,.5);padding-top:10px;margin-top:4px}
+
+.toc h2{margin:0 0 6px}
+.toc .lead{font:400 clamp(34px,3.6vw,46px)/1.06 var(--disp);margin:0 0 28px;max-width:16ch}
+.toc ol{list-style:none;margin:0 0 34px;padding:0;border-top:1px solid var(--ink)}
+.toc li a{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:baseline;padding:16px 0 14px;border-bottom:1px solid var(--hair);text-decoration:none}
+.toc li b{font:400 24px/1.1 var(--disp)}
+.toc li span{color:var(--ink-2)}
+.toc li a:hover b{color:var(--rose)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:14px 22px 12px;font:700 14px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink)}
+.btn.pri{background:var(--ink);color:var(--paper)}
+.btn.pri:hover{background:var(--rose);border-color:var(--rose);color:var(--ink)}
+.btn:not(.pri):hover{background:var(--paper-2)}
+
+/* téma čísla – tmavá dvojstrana */
+.feature{background:var(--ink);color:#F7EBEC;padding:84px 0 90px}
+.feature .grid{display:grid;grid-template-columns:260px 1fr;gap:56px}
+.feature .lbl{color:var(--gold-lt)}
+.feature h2{font:400 46px/1.02 var(--disp);margin:14px 0 22px}
+.feature aside p{margin:0 0 14px;color:#D9C6C9;font-size:16px}
+.services{margin:0;padding:0;list-style:none;font:400 clamp(40px,5.6vw,76px)/1.12 var(--disp);letter-spacing:-.01em}
+.services li{display:inline}
+.services li:not(:last-child)::after{content:"/";color:var(--rose);font-family:var(--sans);font-weight:400;margin:0 .22em 0 .26em;font-size:.7em;vertical-align:.08em}
+.demo{margin-top:40px;padding-top:18px;border-top:1px solid rgba(247,235,236,.28);display:flex;flex-wrap:wrap;gap:12px 40px;align-items:center;justify-content:space-between}
+.demo p{margin:0;max-width:60ch;color:#D9C6C9;font-size:15px}
+.demo .btn{border-color:var(--gold-lt);color:var(--gold-lt)}
+.demo .btn:hover{background:var(--gold-lt);color:var(--ink)}
+
+/* čísla */
+.figures{padding-top:80px;padding-bottom:70px}
+.figures header{display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-bottom:1px solid var(--ink);padding-bottom:12px;margin-bottom:8px}
+.figures h2{font:400 34px/1 var(--disp);margin:0}
+.figures header p{margin:0;color:var(--ink-2);font-size:14px}
+.figs{display:grid;grid-template-columns:repeat(3,1fr)}
+.fig{padding:26px 28px 6px 0}
+.fig+.fig{padding-left:28px;border-left:1px solid var(--hair)}
+.fig b{display:block;font:400 clamp(64px,8vw,104px)/1 var(--disp);letter-spacing:-.02em}
+.fig b sup{font-size:.36em;color:var(--rose);vertical-align:.95em;margin-left:4px}
+.fig p{margin:10px 0 0;color:var(--ink-2);max-width:28ch}
+.fig p strong{color:var(--ink);font-weight:700}
+
+/* zo salónu */
+.salon{background:var(--paper-2);padding:76px 0}
+.salon .grid{display:grid;grid-template-columns:minmax(0,540px) 1fr;gap:56px;align-items:end}
+.salon figure{margin:0}
+.salon figcaption{font-size:13px;color:var(--ink-2);margin-top:10px}
+.salon h2{font:400 clamp(38px,4.4vw,56px)/1.02 var(--disp);margin:12px 0 18px}
+.salon p{margin:0 0 14px;max-width:44ch}
+.salon .lbl{color:var(--gold)}
+
+/* tiráž */
+.imprint{padding-top:80px;padding-bottom:64px}
+.imprint .grid{display:grid;grid-template-columns:1fr 2fr;gap:56px;border-top:6px solid var(--ink);padding-top:28px}
+.imprint h2{font:400 46px/1 var(--disp);margin:0 0 14px}
+.imprint .logo{width:132px;mix-blend-mode:multiply;margin-top:22px}
+.imprint dl{margin:0;display:grid;grid-template-columns:150px 1fr;column-gap:24px}
+.imprint dt{padding:15px 0 13px;border-bottom:1px solid var(--hair)}
+.imprint dd{margin:0;padding:13px 0 13px;border-bottom:1px solid var(--hair);font-size:18px}
+.imprint dd a{text-decoration-thickness:1px;text-underline-offset:3px}
+.imprint dd a:hover{color:var(--rose)}
+.note{display:block;font-size:14px;color:var(--ink-2);margin-top:3px}
+
+footer{border-top:1px solid var(--hair);padding:22px 0 26px;font-size:14px;color:var(--ink-2)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:9;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);padding-bottom:env(safe-area-inset-bottom)}
+.mbar a{min-height:58px;display:flex;align-items:center;justify-content:center;font:700 14px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--paper)}
+.mbar a:first-child{background:var(--rose);color:var(--ink)}
+
+@media (min-width:900px){.mbar{display:none}body{padding-bottom:0}}
+@media (max-width:1060px){.issue{gap:44px}.toc li a{grid-template-columns:120px 1fr}}
+@media (max-width:899px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .top nav{display:none}.top .wrap{justify-content:space-between}
+  .issue{grid-template-columns:1fr;padding-top:22px;padding-bottom:56px;gap:44px}
+  .cover{max-width:460px;width:100%;margin:0 auto;box-shadow:12px 12px 0 var(--paper-2)}
+  .feature{padding:60px 0 64px}.feature .grid{grid-template-columns:1fr;gap:20px}
+  .feature h2{font-size:38px}
+  .figs{grid-template-columns:1fr}.fig,.fig+.fig{padding:22px 0 18px;border-left:0;border-bottom:1px solid var(--hair)}
+  .figures header{flex-direction:column;gap:6px}
+  .salon .grid,.imprint .grid{grid-template-columns:1fr;gap:28px}
+  .imprint dl{grid-template-columns:1fr}.imprint dt{border:0;padding:16px 0 0}.imprint dd{padding-top:4px}
+}
+@media (max-width:420px){
+  .cover-in{padding:12px 14px 16px}
+  .strip{font-size:10px;letter-spacing:.12em}
+  .badge{width:96px;height:96px;right:12px;top:34%}.badge b{font-size:29px}.badge span{font-size:8.5px}
+  .lines p strong{font-size:25px}.lines{max-width:86%}
+  .toc li a{grid-template-columns:1fr;gap:4px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="notice" role="note">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Mandy Beauty</a>
+    <nav aria-label="Obsah stránky">
+      <a href="#sluzby">Služby</a><a href="#hodnotenia">Hodnotenia</a><a href="#salon">Salón</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel num" href="tel:+421915832513">0915 832 513</a>
+  </div>
+</header>
+
+<main>
+<section class="wrap issue" aria-label="Titulka">
+  <figure class="cover">
+    <img src="assets/mandy-kvetinova-stena.webp" width="540" height="900" alt="Ružová kvetinová stena so zlatým nápisom Mandy Beauty v salóne vo Vrútkach" fetchpriority="high">
+    <div class="cover-in">
+      <div class="strip"><span>Vrútky · Martin</span><span class="num">Ukážkové číslo 10/2026</span></div>
+      <h1>Mandy<small>Beauty</small></h1>
+      <div class="badge" aria-label="Hodnotenie 5,0 na Google zo 78 hodnotení"><b class="num">5,0</b><span>Google<br>78 hodnotení</span></div>
+      <div class="lines">
+        <p><strong>Pleť</strong>kozmetika pleti a hydrabrázia</p>
+        <p><strong>Riasy a ruky</strong>laminácia rias, manikúra</p>
+        <p><strong>Telo</strong>IPL epilácia a masáže</p>
+        <p class="tag">„Krása pod jednou strechou“</p>
+      </div>
+    </div>
+  </figure>
+
+  <div class="toc">
+    <h2 class="lbl">V tomto čísle</h2>
+    <p class="lead">Kozmetický salón na Hornej ulici vo Vrútkach</p>
+    <ol>
+      <li><a href="#sluzby"><b>Služby</b><span>Pleť, riasy, ruky a telo — čo sa v salóne robí.</span></a></li>
+      <li><a href="#hodnotenia"><b>Hodnotenia</b><span class="num">5,0 na Google zo 78 hodnotení, 100 % odporúčaní na Facebooku.</span></a></li>
+      <li><a href="#salon"><b>Salón</b><span>Ružová kvetinová stena s menom salónu.</span></a></li>
+      <li><a href="#kontakt"><b>Kontakt</b><span>Telefón, e-mail, adresa a hodiny.</span></a></li>
+    </ol>
+    <div class="ctas">
+      <a class="btn pri" href="tel:+421915832513">Zavolať a objednať sa</a>
+      <a class="btn" href="https://www.facebook.com/people/Mandy-Beauty/100083335868985/" rel="noopener" target="_blank">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="sluzby" aria-labelledby="sluzby-h">
+  <div class="wrap grid">
+    <aside>
+      <p class="lbl">Téma čísla</p>
+      <h2 id="sluzby-h">Služby salónu</h2>
+      <p>Od ošetrenia pleti po manikúru. Na termín sa pýtajte telefonicky.</p>
+    </aside>
+    <div>
+      <ul class="services">
+        <li>Kozmetika pleti</li>
+        <li>Hydrabrázia</li>
+        <li>IPL epilácia</li>
+        <li>Laminácia rias</li>
+        <li>Manikúra</li>
+        <li>Masáže</li>
+      </ul>
+      <div class="demo">
+        <p><strong>Ukážka návrhu:</strong> zoznam služieb je podľa verejných údajov z katalógov — overiť so salónom. Cenník a popisy ošetrení doplní salón.</p>
+        <a class="btn" href="tel:+421915832513">Objednať sa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap figures" id="hodnotenia" aria-labelledby="hod-h">
+  <header><h2 id="hod-h">V číslach</h2><p>Stav k 1. 10. 2026</p></header>
+  <div class="figs">
+    <div class="fig"><b class="num">5,0<sup>★</sup></b><p><strong>Google</strong> · 78 hodnotení (podľa katalógu ModaModa)</p></div>
+    <div class="fig"><b class="num">100 %</b><p><strong>Facebook</strong> · odporúča 13 z 13 recenzií</p></div>
+    <div class="fig"><b class="num">2,4 tis.</b><p><strong>sledujúcich</strong> facebookovú stránku salónu</p></div>
+  </div>
+</section>
+
+<section class="salon" id="salon" aria-labelledby="salon-h">
+  <div class="wrap grid">
+    <figure>
+      <img src="assets/mandy-ruze.webp" width="540" height="370" loading="lazy" alt="Kytica koralových ruží na stolíku v salóne Mandy Beauty">
+      <figcaption>Foto: facebooková stránka Mandy Beauty</figcaption>
+    </figure>
+    <div>
+      <p class="lbl">Zo salónu</p>
+      <h2 id="salon-h">Ruže, ružová stena a zlaté písmo</h2>
+      <p>Salón nájdete vo Vrútkach na Hornej ulici. Na titulke je jeho kvetinová stena s menom Mandy Beauty.</p>
+      <p>Ukážka návrhu: sem patrí niekoľko fotiek interiéru a výsledkov práce, ktoré dodá salón.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap imprint" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="grid">
+    <div>
+      <p class="lbl">Tiráž</p>
+      <h2 id="kontakt-h">Kontakt</h2>
+      <img class="logo" src="assets/mandy-logo.webp" width="240" height="240" loading="lazy" alt="Logo Mandy Beauty — zlatý kaligrafický nápis v oblúku">
+    </div>
+    <dl>
+      <dt class="lbl">Adresa</dt>
+      <dd>Horná 13, 038 61 Vrútky <a class="note" href="https://www.google.com/maps/search/Mandy+Beauty+Horn%C3%A1+13+Vr%C3%BAtky" rel="noopener" target="_blank">Otvoriť v Google Maps</a></dd>
+      <dt class="lbl">Telefón</dt>
+      <dd><a class="num" href="tel:+421915832513">0915 832 513</a></dd>
+      <dt class="lbl">E-mail</dt>
+      <dd><a href="mailto:mandybeautymartin@gmail.com">mandybeautymartin@gmail.com</a></dd>
+      <dt class="lbl">Otvorené</dt>
+      <dd class="num">Po – Pi 8.00 – 17.00 · So – Ne zatvorené<span class="note">podľa katalógu ModaModa, jediný zdroj — overiť</span></dd>
+      <dt class="lbl">Facebook</dt>
+      <dd><a href="https://www.facebook.com/people/Mandy-Beauty/100083335868985/" rel="noopener" target="_blank">Mandy Beauty | Vrútky</a></dd>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Neoficiálny návrh webu · webdavid.sk · 2026</span><span>Fotky: facebooková stránka Mandy Beauty</span></div></footer>
+
+<nav class="mbar" aria-label="Rýchly kontakt">
+  <a href="tel:+421915832513">Zavolať</a>
+  <a href="https://www.facebook.com/people/Mandy-Beauty/100083335868985/" rel="noopener" target="_blank">Facebook</a>
+</nav>
